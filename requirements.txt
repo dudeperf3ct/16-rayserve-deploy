@@ -1,0 +1,4 @@
+-f https://download.pytorch.org/whl/lts/1.8/torch_lts.html
+torch==1.8.2+cpu
+transformers==4.13.0
+loguru==0.5.3
