@@ -37,8 +37,7 @@ class SentimentBertModel:
             probs = F.softmax(outputs.logits, dim=1).numpy()[0]
         logger.info(f"Logits: {outputs.logits.numpy()[0]}")
         logger.info(f"Probabilities: {probs}")
-        d = self.create_dict(text, probs)
-        return d
+        return self.create_dict(text, probs)
 
     def create_dict(self, text: str, probs: list) -> dict:
         d = defaultdict()
